@@ -26,8 +26,9 @@ Route::get('login', function()
 	return View::make('login');
 });
 Route::post('checkLogin','CheckLoginController@checkLogin');
+Route::post('logout','LogoutController@logout');
+Route::post('pickUser/{userId}','CheckLoginController@pickUser');
+Route::post('editUser/{userId}','CheckLoginController@editUser');
 
-Route::get('register', function()
-{
-	return View::make('register');
-});
+Route::get('registerForm','RegisterController@registerForm');
+Route::post('registerNew','RegisterController@registerNew');

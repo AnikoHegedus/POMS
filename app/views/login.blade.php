@@ -7,7 +7,7 @@
 <div id="login" class="flexbox-container">
     
     {{ Form:: open(array('action' => 'post', 'url' => 'checkLogin')) }}
-    {{ Form::label('email', 'E-Mail Address') }}
+    {{ Form::label('email', 'Email Address') }}
     {{ Form::text('email', '') }}
     {{ '<br>'}}
     {{ '<br>'}}

@@ -57,3 +57,21 @@ h2 {
 .login_warning {
     color: red;
 }
+
+/* USERS TABLE */
+table {
+    margin-left:20%;
+	width: 60%;
+}
+table, th, tr, td{
+	text-align: center;
+  }
+
+  table, th, tr {
+	border: 1px solid black;
+	text-align: center;
+  }
+
+#edit-user{
+    margin: 5% 0;
+}
