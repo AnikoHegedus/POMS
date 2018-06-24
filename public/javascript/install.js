@@ -17,4 +17,5 @@ $(document).ready(function () {
         $(".previous-btn").hide();
         $(".next-btn").show();
     });
+
 });

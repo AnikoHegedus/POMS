@@ -32,10 +32,13 @@
     <script src="{{ asset('/javascript/install.js') }}"></script>  
   </head>
 
-  <body id="page-top">
+<body id="page-top">
     <nav class="navbar navbar-default">
-<div id="header">
-    <div class="header-text">
-        <h1>POMS exercise</h1>
-    </div>
-</div>
+        <div id="header">
+            <div class="header-text">
+                <h1>POMS exercise</h1>
+             </div>
+        </div>
+    </nav>
+</body>  
+</html>

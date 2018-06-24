@@ -8,7 +8,7 @@
     
     {{ Form:: open(array('action' => 'post', 'url' => 'checkLogin')) }}
     {{ Form::label('email', 'Email Address') }}
-    {{ Form::text('email', '') }}
+    {{ Form::email('email', '') }}
     {{ '<br>'}}
     {{ '<br>'}}
     {{ Form::label('password', 'Password') }}

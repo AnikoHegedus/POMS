@@ -55,13 +55,14 @@ h2 {
     margin-top: 50px;
 }
 
-.login_warning {
+.login_warning, .pw_error{
     color: red;
 }
 
 /* USERS TABLE */
 table {
     margin-left:20%;
+    margin-top: 5%;
 	width: 60%;
 }
 table, th, tr, td{

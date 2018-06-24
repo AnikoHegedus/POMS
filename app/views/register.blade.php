@@ -6,26 +6,34 @@
 
 <div id="login" class="flexbox-container">
     
-    {{ Form:: open(array('action' => 'post', 'url' => 'register')) }}
+    {{ Form:: open(array('action' => 'post', 'url' => 'registerNew')) }}
     {{ Form::label('username', '') }}
     {{ Form::text('username', '') }}
     {{ '<br>'}}
     {{ '<br>'}}
     {{ Form::label('email', 'Email Address') }}
-    {{ Form::text('email', '') }}
+    {{ Form::email('email', '') }}
     {{ '<br>'}}
     {{ '<br>'}}
     {{ Form::label('password', 'Password') }}
     {{ Form::password('password') }}
     {{ '<br>'}}
     {{ '<br>'}}
-    {{ Form::button('Register', array('class' => 'btn', 'id' => 'final', 'type' => 'submit')) }}
+    {{ Form::label('repeatPassword', 'Repeat password') }}
+    {{ Form::password('repeatPassword') }}
+    {{ '<br>'}}
+    {{ '<br>'}}
+    {{ Form::button('Register', array('class' => 'btn', 'id' => 'register', 'type' => 'submit')) }}
     {{ Form::close() }}
 
 </div>
 
-<div class="login_warning">
-{{ isset($no_login_or_password) ? 'Login failed' : ''; }}
+<div class="registered">
+    {{ isset($username) ? $username . ' has been registered' : ''; }}
+</div>
+
+<div class="pw_error">
+    {{ isset($pwError) ? 'Please retype the passwords' : ''; }}
 </div>
 
 @stop

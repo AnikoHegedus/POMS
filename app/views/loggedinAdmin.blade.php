@@ -58,7 +58,7 @@
           </td>
           <td class="flex-item">
             {{ Form:: open(array('action' => 'post', 'url' => 'pickUser/'.$user->id)) }}
-            {{ Form::button('Go', array('class' => 'btn', 'id' => 'final', 'type' => 'submit')) }}
+            {{ Form::button('Edit', array('type' => 'submit')) }}
             {{ Form::close() }}
           </td>
         </tr>

@@ -14,10 +14,10 @@
 Route::get('home', function()
 {
 	$numberOfRows = DB::table('aniko_hegedus_users')->count();
-	if($numberOfRows > 0) {
+	if($numberOfRows == 0) {
 		return View::make('install');
 	} else {
-		return View::make('home');
+		return View::make('login');
 	}
 });
 
@@ -32,8 +32,12 @@ Route::get('login', function()
 });
 Route::post('checkLogin','CheckLoginController@checkLogin');
 Route::post('logout','LogoutController@logout');
+
 Route::post('pickUser/{userId}','CheckLoginController@pickUser');
 Route::post('editUser/{userId}','CheckLoginController@editUser');
 
-Route::get('registerForm','RegisterController@registerForm');
+Route::get('registerForm', function()
+{
+	return View::make('register');
+});
 Route::post('registerNew','RegisterController@registerNew');
