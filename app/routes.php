@@ -13,7 +13,12 @@
 
 Route::get('home', function()
 {
-	return View::make('home');
+	$numberOfRows = DB::table('aniko_hegedus_users')->count();
+	if($numberOfRows > 0) {
+		return View::make('install');
+	} else {
+		return View::make('home');
+	}
 });
 
 Route::get('about', function()

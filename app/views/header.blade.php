@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Aniko Hegedus">
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>POMS exercice</title>
@@ -29,7 +29,7 @@
 
     <!-- jQuery -->
     <!--<script src="{{ asset('/js/jquery.min.js') }}"></script>-->
-    <script src="{{ asset('/js/random_word.js') }}"></script>  
+    <script src="{{ asset('/javascript/install.js') }}"></script>  
   </head>
 
   <body id="page-top">
