@@ -41,3 +41,5 @@ Route::get('registerForm', function()
 	return View::make('register');
 });
 Route::post('registerNew','RegisterController@registerNew');
+
+Route::post('createTable', 'CreateTableController@createTable');

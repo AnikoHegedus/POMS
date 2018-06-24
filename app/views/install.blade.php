@@ -14,7 +14,7 @@
         <li>CSS</li>
         <li>Git</li>
     </ul>
-    <p>There are three steps of installing of a database, now please proceed to the next step.</p>
+    <p>There are two steps of installing of a database, now please proceed to the next step.</p>
 </div>
 
 <div id="second-install">
@@ -22,28 +22,36 @@
         <p>Please register your database</p>
         <div id="login" class="flexbox-container">
     
-        {{ Form:: open(array('action' => 'post', 'url' => '')) }}
+        {{ Form:: open(array('action' => 'post', 'url' => 'createTable')) }}
         {{ Form::label('email', 'Email Address') }}
-        {{ Form::text('email', '') }}
+        {{ Form::email('email', '') }}
         {{ '<br>'}}
         {{ '<br>'}}
         {{ Form::label('username', 'Username') }}
-        {{ Form::password('password') }}
+        {{ Form::text('username') }}
         {{ '<br>'}}
         {{ '<br>'}}
         {{ Form::label('password', 'Password') }}
         {{ Form::password('password') }}
         {{ '<br>'}}
         {{ '<br>'}}
+        {{ Form::label('repeatPassword', 'Repeat password') }}
+        {{ Form::password('repeatPassword') }}
+        {{ '<br>'}}
+        {{ '<br>'}}
         {{ Form::label('database', 'Name of database') }}
-        {{ Form::password('database') }}
+        {{ Form::text('database') }}
+        {{ '<br>'}}
+        {{ '<br>'}}
+        {{ Form::button('Save', array('class' => 'btn', 'id' => 'final', 'type' => 'submit')) }}
         {{ Form::close() }}
-        <div><a href='home'>Save</a></div>
         <br>
     </div>
 </div>
 
-<div></div>
+<div class="pw_error">
+    {{ isset($pwError) ? 'Please retype the passwords' : ''; }}
+</div>
 
 <div class="flexbox-container">
 <button class="previous-btn btn">Previous page</button>

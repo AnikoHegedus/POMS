@@ -2,9 +2,6 @@
 
 @section('content')
 
-@if(isset($loggedin_user))
-<h2>Hello, {{ $loggedin_user->username }} !</h2>
-@endif
 
 @if(isset($userToEdit))
 <h2>Edit user</h2>

@@ -52,7 +52,7 @@ public function pickUser($userId){
 public function editUser($userId){
     $username = Input::get('username');
     $email = Input::get('email');
-    $password = Input::get('password');
+    $password = Hash::make('password');
     $admin = Input::get('admin');
     DB::table('aniko_hegedus_users') ->where('id', $userId)->update(['username' => $username, 'email' => $email, 'password' => $password, 'admin' => $admin]);
     $all_users = DB::select('SELECT * FROM aniko_hegedus_users');
