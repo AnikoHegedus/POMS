@@ -99,3 +99,19 @@ table, th, tr, td{
     padding:5px;
     border-radius: 5px;
 }
+
+
+/* FOOTER */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.linkedin-logo{
+    height: 18px;
+    margin-right: 10px;
+}

@@ -37,7 +37,7 @@ public function checkLogin()
     } else {
         $no_login_or_password = true;
     }
-
+    //email or pw not provided
     if($no_login_or_password) {
         return View::make('login') ->with(['no_login_or_password' => $no_login_or_password]);
     }
