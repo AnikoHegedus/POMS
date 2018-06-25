@@ -21,7 +21,8 @@
 </div>
 
 <div class="login_warning">
-{{ isset($no_login_or_password) ? 'Login failed' : ''; }}
+    {{ isset($no_login_or_password) ? 'Login failed' : ''; }}
+    {{ isset($banned) ? 'You are banned from the site.' : ''; }}
 </div>
 
 @stop

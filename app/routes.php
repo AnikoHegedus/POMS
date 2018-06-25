@@ -21,11 +21,6 @@ Route::get('home', function()
 	}
 });
 
-Route::get('about', function()
-{
-	return View::make('about');
-});
-
 Route::get('login', function()
 {
 	return View::make('login');
@@ -33,8 +28,8 @@ Route::get('login', function()
 Route::post('checkLogin','CheckLoginController@checkLogin');
 Route::post('logout','LogoutController@logout');
 
-Route::post('pickUser/{userId}','CheckLoginController@pickUser');
-Route::post('editUser/{userId}','CheckLoginController@editUser');
+Route::post('pick','CheckLoginController@pick');
+Route::post('edit','CheckLoginController@edit');
 
 Route::get('registerForm', function()
 {
